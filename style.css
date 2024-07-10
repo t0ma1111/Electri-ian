@@ -4,24 +4,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
+
 /* Стили для заголовка */
 .header {
     background: #ffffff;
     color: #db555c;
     position: relative;
-    top:0;
+    top: 0;
     z-index: 10;
-    
 }
+
 .header .navig {
     padding: 20px 0;
     background: #ffffff;
     text-align: center;
 }
+
 .header .navig ul {
     list-style: none;
     padding: 0;
@@ -56,6 +59,7 @@ body {
     background: url(faceAbram.jpg) no-repeat center fixed;
     background-size: cover; /* Добавлено для масштабирования изображения */
 }
+
 .main-wrapper {
     margin: 0 auto;
     padding: 0 15px;
@@ -66,7 +70,7 @@ body {
     width: 50%;
     font-size: 14px;
     font-weight: 600;
-    height: 400px
+    height: 400px;
 }
 
 .header .face h1 {
@@ -77,17 +81,20 @@ body {
     padding-left: 0;
     font-family: 'Playfair Display', serif;
 }
+
 .header .face p {
     font-size: 1.2em;
-    margin: 50px 0;
+    margin: 50px auto;
     max-width: 600px;
+    max-height: 350px;
     background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный фон для улучшения читаемости */
     padding: 20px;
     color: #ffffff;
     text-align: left;
     font-family: 'Playfair Display', serif;
-    transform: transform  0.3s ease;
+    transition: transform 0.3s ease;
 }
+
 .header .face p:hover {
     transform: scale(1.05); /* Добавлено для эффекта увеличения */
 }
@@ -156,6 +163,7 @@ body {
     .header .face {
         padding: 20px;
         height: auto;
+        background-attachment: scroll; /* Изменение для мобильных устройств */
     }
 
     .header .face h1 {
@@ -165,6 +173,39 @@ body {
     .header .face p {
         font-size: 1em;
         padding: 15px;
+        max-width: 90%; /* Изменение для адаптации ширины */
+        margin: 20px auto; /* Центрирование */
+    }
+
+    /* Обновление для предотвращения наложения элементов */
+    .gallery {
+        padding: 20px 0;
+    }
+}
+
+/* Дополнительные стили для мобильных устройств */
+@media (max-width: 480px) {
+    .header .navig ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .header .navig ul li a {
+        font-size: 1em;
+    }
+
+    .header .face h1 {
+        font-size: 1.5em;
+        margin: 20px auto;
+    }
+
+    .header .face p {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -172,7 +213,6 @@ body {
     padding: 50px 20px;
     background-color: #b4b3b3;
     text-align: left;
-    
 }
 
 .faq h2 {
@@ -188,7 +228,8 @@ body {
 
 .faq-item h3 {
     font-size: 1.5em;
-    color: #150102;
+    color: #261da9;
+    text-decoration: underline;
     margin: 0;
 }
 
@@ -202,6 +243,7 @@ body {
 .contact h2 {
     margin-top: 30px;
 }
+
 .contact-details {
     text-align: left;
     margin: 20px 0;
@@ -235,21 +277,22 @@ body {
     align-items: center;
     display: flex;
 }
-  
+
 footer > .main-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-  
+
 .main-wrapper h2 {
     text-decoration: underline;
     text-decoration-color: #ff0000;
 }
-  .social-cont {
+
+.social-cont {
     margin: 20px 0;
 }
-  
+
 .social-cont > a {
     color: red;
     font-size: 16px;
@@ -261,7 +304,7 @@ footer > .main-wrapper {
     display: inline-block;
     transition-duration: 0.3s;
 }
-  
+
 .social-cont > a::before {
     content: '';
     width: 25px;
@@ -274,12 +317,11 @@ footer > .main-wrapper {
     transition-duration: 0.3s;
     z-index: -1;
 }
-  
+
 .social-cont > a:hover {
     color: #000000;
 }
-  
-.social-cont > a:hover::before {
-   background: #ff0000;
-}
 
+.social-cont > a:hover::before {
+    background: #ff0000;
+}
